@@ -20,7 +20,7 @@ public class Solution {
             String doubleNum = currEl + romanNumArr[i + 1];
             if (romanDecimalMap.get(doubleNum) != null) {
                 result += romanDecimalMap.get(doubleNum);
-                i += 1;
+                i++;
                 continue;
             }
             result += romanDecimalMap.get(currEl);
