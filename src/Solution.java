@@ -9,15 +9,18 @@ public class Solution {
         Map<String, Integer> romanDecimalMap = getStringIntegerMap();
         int result = 0;
 
+        String currEl;
+        String doubleNum;
+
         for (int i = 0; i < romanNumArr.length; i++) {
-            String currEl = romanNumArr[i];
+            currEl = romanNumArr[i];
 
             if (i == romanNumArr.length - 1) {
                 result += romanDecimalMap.get(currEl);
                 break;
             }
 
-            String doubleNum = currEl + romanNumArr[i + 1];
+            doubleNum = currEl + romanNumArr[i + 1];
             if (romanDecimalMap.get(doubleNum) != null) {
                 result += romanDecimalMap.get(doubleNum);
                 i++;
