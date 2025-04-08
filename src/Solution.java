@@ -143,6 +143,7 @@ public class Solution {
     }
 
     // Минимальное кол-во купюр из банкомата по указанной сумме
+    // Сложность O( n*log(n) + n )
     public static int minBanknotes(int[] banknotes, int amount) {
         Arrays.sort(banknotes);
         int count = 0;
